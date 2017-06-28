@@ -1,0 +1,26 @@
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes.dex : \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$6.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLSurface.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLJoystickHandler_API12.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$4.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$3.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$2.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/R$string.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLInputConnection.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$ShowTextInputTask.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLSurface$1.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLJoystickHandler_API12$SDLJoystick.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/R.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$SDLCommandHandler.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLJoystickHandler.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/R$drawable.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/R$layout.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLJoystickHandler_API12$RangeComparator.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/BuildConfig.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$5.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLActivity$1.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLGenericMotionListener_API12.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/R$attr.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/SDLMain.class \
+/usr/local/projects/kiss_sdl_cpp_android/bin/classes/org/libsdl/app/DummyEdit.class \
