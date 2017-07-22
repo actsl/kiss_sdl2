@@ -7,9 +7,9 @@ kiss_sdl - Simple generic GUI widget toolkit for SDL2
 SCREENSHOTS
 ===========
 
-![](https://raw.githubusercontent.com/actsl/kiss_sdl2/master/kiss_ss1.jpg)
+![](https://raw.githubusercontent.com/actsl/kiss_sdl/master/kiss_ss1.jpg)
 
-![](https://raw.githubusercontent.com/actsl/kiss_sdl2/master/kiss_ss2.jpg)
+![](https://raw.githubusercontent.com/actsl/kiss_sdl/master/kiss_ss2.jpg)
 
 
 DESCRIPTION
