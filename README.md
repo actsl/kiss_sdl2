@@ -193,9 +193,9 @@ necessary, or the change may be simple, like only changing the version
 of the library from 2.0.5 to 2.0.6.
 
 In Windows, this toolkit was tested with MinGW-w64, installed with the
-installer downloaded from https://sourceforge.net/projects/mingw-w64
-for i686 (32 bit) to C:\\ , with C:\\mingw-w64\\mingw32\\bin added to
-the Path. Other versions of MinGW should also work, but they are not
+installer downloaded from https://sourceforge.net/projects/mingw-w64 for
+i686 (32 bit) to C:\\mingw-w64 , with C:\\mingw-w64\\mingw32\\bin added
+to the Path. Other versions of MinGW should also work, but they are not
 tested. A 32 bit compiler also works with 64 bit Windows, but a 64 bit
 compiler cannot be used with 32 bit Windows.
 
