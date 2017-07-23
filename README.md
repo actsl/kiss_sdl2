@@ -199,13 +199,11 @@ to the Path. Other versions of MinGW should also work, but they are not
 tested. A 32 bit compiler also works with 64 bit Windows, but a 64 bit
 compiler cannot be used with 32 bit Windows.
 
-It was also tested in the Visual Studio Community 2015 and
-SDL2 version 2.0.4. The project files for the Visual Studio are
-provided, but a similar changes to the library paths should be made
-if necessary, as described above, in the project -> properties ->
-configuration properties -> vc++ directories. Also the include path
-C:\SDL2-2.0.5\x86_64-w64-mingw32\include\SDL2 has to be added for
-SDL2-2.0.5. The paths of the 64 bit SDL2 libraries for x64 are entered,
+It was also tested in the Visual Studio Community 2015 and SDL2 version
+2.0.4. The project files for the Visual Studio are provided, but a similar
+changes to the library paths should be made if necessary, as described
+above, in the project -> properties -> configuration properties -> vc++
+directories. The paths of the 64 bit SDL2 libraries for x64 are entered,
 but it was not tested with x64.
 
 For compiling in Visual Studio, run kiss_example1.vcxproj or
