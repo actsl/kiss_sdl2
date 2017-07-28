@@ -160,7 +160,7 @@ the keyboard input and also the C source code, all is in UTF-8.
 The kiss_sdl manual, including the full reference, Hello World example
 and example 2 tutorial, is at the following link.
 
-https://raw.githubusercontent.com/actsl/kiss_sdl/master/kiss_manual.pdf
+https://raw.githubusercontent.com/actsl/kiss_sdl2/master/kiss_manual.pdf
 
 
 INSTALL
