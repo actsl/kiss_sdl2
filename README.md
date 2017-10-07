@@ -1,4 +1,4 @@
-***The original maintained repository is at***  https://github.com/actsl/kiss_sdl
+***The original maintained repository of this is at***  https://github.com/actsl/kiss_sdl
 
 NAME
 ====
