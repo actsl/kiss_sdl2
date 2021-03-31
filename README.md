@@ -3,7 +3,7 @@
 NAME
 ====
 
-kiss_sdl - Simple generic GUI widget toolkit for SDL2
+SDL2_kiss - Simple generic GUI widget toolkit for SDL2
 
 
 SCREENSHOTS
@@ -55,7 +55,7 @@ new widget, a function to process the events, and a function to draw. The
 base functions implemented for the widgets, do all the automagical things,
 and the user can write one's own function, using a base function inside
 it, to do any additional things that the user may want to do. See the
-examples and the header file kiss_sdl.h .
+examples and the header file SDL2_kiss.h .
 
 Widgets can be made visible and invisible, an invisible widget is also
 inactive and doesn't perform any functions. In the examples, all widgets
@@ -156,7 +156,7 @@ or what you can do. Just learn the basic things about how it works,
 the toolkit is simple and thus not difficult to learn, but it would be
 difficult to do what you want otherwise.
 
-kiss_sdl is fully capable of UTF-8 (8-bit Unicode). The rendered text,
+SDL2_kiss is fully capable of UTF-8 (8-bit Unicode). The rendered text,
 the keyboard input and also the C source code, all is in UTF-8.
 
 The kiss_sdl manual, including the full reference, Hello World example

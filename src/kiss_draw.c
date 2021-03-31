@@ -176,10 +176,13 @@ SDL_Renderer* kiss_init(char* title, kiss_array *a, int w, int h)
 	SDL_Renderer *renderer;
 	SDL_Rect srect;
 	int r;
-	#ifdef IMAGE_DIR
-	#pragma message( IMAGE_DIR )
-	#endif
-	char image_path[PATH_MAX] = IMAGE_DIR;
+
+	char* path[32];
+	for (int i = 0; i < 32; i++)
+	{
+		path[i] = strdup(DATA_DIR);
+	}
+
 	r = 0;
 	SDL_Init(SDL_INIT_EVERYTHING);
 	SDL_GetDisplayBounds(0, &srect);
@@ -199,24 +202,23 @@ SDL_Renderer* kiss_init(char* title, kiss_array *a, int w, int h)
 	renderer = SDL_CreateRenderer(window, -1,
 		SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	if (renderer) kiss_array_append(a, RENDERER_TYPE, renderer);
-	r += kiss_font_new(&kiss_textfont, "kiss_font.ttf", a,
+	r += kiss_font_new(&kiss_textfont, strcat(path[0] , "kiss_font.ttf"), a,
 		kiss_textfont_size);
-	r += kiss_font_new(&kiss_buttonfont, "kiss_font.ttf", a,
+	r += kiss_font_new(&kiss_buttonfont, path[0], a,
 		kiss_buttonfont_size);
-	r += kiss_image_new(&kiss_normal, strcat(image_path,"kiss_normal.png"), a, renderer);
-	r += kiss_image_new(&kiss_prelight, strcat(image_path,"kiss_prelight.png"), a, renderer);
-	r += kiss_image_new(&kiss_active, "kiss_active.png", a, renderer);
-	r += kiss_image_new(&kiss_bar, "kiss_bar.png", a, renderer);
-	r += kiss_image_new(&kiss_vslider, "kiss_vslider.png", a, renderer);
-	r += kiss_image_new(&kiss_hslider, "kiss_hslider.png", a, renderer);
-	r += kiss_image_new(&kiss_up, "kiss_up.png", a, renderer);
-	r += kiss_image_new(&kiss_down, "kiss_down.png", a, renderer);
-	r += kiss_image_new(&kiss_left, "kiss_left.png", a, renderer);
-	r += kiss_image_new(&kiss_right, "kiss_right.png", a, renderer);
-	r += kiss_image_new(&kiss_combo, "kiss_combo.png", a, renderer);
-	r += kiss_image_new(&kiss_selected, "kiss_selected.png", a, renderer);
-	r += kiss_image_new(&kiss_unselected, "kiss_unselected.png", a,
-		renderer);
+	r += kiss_image_new(&kiss_normal, strcat(path[1],"kiss_normal.png"), a, renderer);
+	r += kiss_image_new(&kiss_prelight, strcat(path[2],"kiss_prelight.png"), a, renderer);
+	r += kiss_image_new(&kiss_active, strcat(path[3], "kiss_active.png"), a, renderer);
+	r += kiss_image_new(&kiss_bar, strcat(path[4], "kiss_bar.png"), a, renderer);
+	r += kiss_image_new(&kiss_vslider, strcat(path[4], "kiss_vslider.png"), a, renderer);
+	r += kiss_image_new(&kiss_hslider, strcat(path[5], "kiss_hslider.png"), a, renderer);
+	r += kiss_image_new(&kiss_up, strcat(path[6], "kiss_up.png"), a, renderer);
+	r += kiss_image_new(&kiss_down, strcat(path[7], "kiss_down.png"), a, renderer);
+	r += kiss_image_new(&kiss_left, strcat(path[8], "kiss_left.png"), a, renderer);
+	r += kiss_image_new(&kiss_right, strcat(path[9], "kiss_right.png"), a, renderer);
+	r += kiss_image_new(&kiss_combo, strcat(path[10], "kiss_combo.png"), a, renderer);
+	r += kiss_image_new(&kiss_selected, strcat(path[11], "kiss_selected.png"), a, renderer);
+	r += kiss_image_new(&kiss_unselected, strcat(path[12], "kiss_unselected.png"), a, renderer);
 	if (r) {
 		kiss_clean(a);
 		return NULL;

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 
-project(SDL2_kiss LANGUAGES C CXX)
+project(SDL2_kiss VERSION 1.0 LANGUAGES C CXX)
 
 include (GNUInstallDirs)
 include (FindPkgConfig)
@@ -28,7 +28,8 @@ set(SOURCE_FILES
     "src/kiss_widgets.c"
 )
 add_library(${PROJECT_NAME} ${SOURCE_FILES})
-add_definitions( -DIMAGE_DIR="${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}/" )
+add_definitions(
+	-DDATA_DIR="${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}-${PROJECT_VERSION}/" )
 target_include_directories(${PROJECT_NAME} PUBLIC
      "${CMAKE_SOURCE_DIR}/include"
 )
@@ -60,8 +61,24 @@ target_include_directories(kiss_example2 PUBLIC
 
 target_link_libraries(kiss_example2 PUBLIC ${PROJECT_NAME}
 )
+
 install(
-    TARGETS ${PROJECT_NAME}
+	TARGETS ${PROJECT_NAME}
+)
+
+install(
+	DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/ DESTINATION
+	    "${CMAKE_INSTALL_DATADIR}/${PROJECT_NAME}-${PROJECT_VERSION}"
+	    FILES_MATCHING PATTERN "*.png" PATTERN "*.jpg"
+)
+install(
+	DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data/ DESTINATION
+	    "${CMAKE_INSTALL_DATADIR}/fonts/kiss"
+	    FILES_MATCHING PATTERN "*.ttf"
+)
+install(
+	DIRECTORY doc DESTINATION
+	"${CMAKE_INSTALL_DATADIR}/doc/${PROJECT_NAME}-${PROJECT_VERSION}"
 )
 
 set(ROOT_NAMESPACE kiss_sdl2)
