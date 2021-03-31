@@ -22,7 +22,7 @@
   kiss_sdl version 1.2.0
 */
 
-#include "kiss_sdl.h"
+#include "SDL2/SDL_kiss.h"
 
 kiss_font kiss_textfont, kiss_buttonfont;
 kiss_image kiss_normal, kiss_prelight, kiss_active, kiss_bar,
@@ -176,7 +176,10 @@ SDL_Renderer* kiss_init(char* title, kiss_array *a, int w, int h)
 	SDL_Renderer *renderer;
 	SDL_Rect srect;
 	int r;
-
+	#ifdef IMAGE_DIR
+	#pragma message( IMAGE_DIR )
+	#endif
+	char image_path[PATH_MAX] = IMAGE_DIR;
 	r = 0;
 	SDL_Init(SDL_INIT_EVERYTHING);
 	SDL_GetDisplayBounds(0, &srect);
@@ -200,8 +203,8 @@ SDL_Renderer* kiss_init(char* title, kiss_array *a, int w, int h)
 		kiss_textfont_size);
 	r += kiss_font_new(&kiss_buttonfont, "kiss_font.ttf", a,
 		kiss_buttonfont_size);
-	r += kiss_image_new(&kiss_normal, "kiss_normal.png", a, renderer);
-	r += kiss_image_new(&kiss_prelight, "kiss_prelight.png", a, renderer);
+	r += kiss_image_new(&kiss_normal, strcat(image_path,"kiss_normal.png"), a, renderer);
+	r += kiss_image_new(&kiss_prelight, strcat(image_path,"kiss_prelight.png"), a, renderer);
 	r += kiss_image_new(&kiss_active, "kiss_active.png", a, renderer);
 	r += kiss_image_new(&kiss_bar, "kiss_bar.png", a, renderer);
 	r += kiss_image_new(&kiss_vslider, "kiss_vslider.png", a, renderer);
