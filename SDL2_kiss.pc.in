@@ -8,5 +8,9 @@ Description: @PROJECT_DESCRIPTION@
 Version: @PROJECT_VERSION@
 
 Requires: sdl2 >= @SDL_VERSION@
-Libs: -L${libdir} -l@PROJECT_NAME@
-Cflags: -I${includedir}/SDL2
+Requires: SDL2_ttf >= @SDL_TTF_VERSION@
+Requires: SDL2_image >= @SDL_IMAGE_VERSION@
+Requires: SDL2_mixer >= @SDL_MIXER_VERSION@
+
+Libs: -L${prefix}/${libdir} -l@PROJECT_NAME@
+Cflags: -I${prefix}/${includedir}/SDL2
