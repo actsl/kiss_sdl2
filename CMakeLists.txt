@@ -68,9 +68,10 @@ target_include_directories(kiss_example2 PUBLIC
 target_link_libraries(kiss_example2 PUBLIC ${PROJECT_NAME}
 )
 
-set(install_prefix "${CMAKE_INSTALL_PREFIX}")
-set(install_libdir "${CMAKE_INSTALL_LIBDIR}")
-set(install_includedir "${SDL2_INCLUDES}")
+set(prefix "${CMAKE_INSTALL_PREFIX}")
+set(libdir "${CMAKE_INSTALL_LIBDIR}")
+set(includedir "${CMAKE_INSTALL_INCLUDEDIR}")
+set(SDL_VERSION "${SDL2_VERSION}")
 
 configure_file(${PROJECT_NAME}.pc.in ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.pc @ONLY)
 
