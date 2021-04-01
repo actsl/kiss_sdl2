@@ -101,4 +101,4 @@ install(
 
 install(FILES ${PROJECT_NAME}.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig/)
 
-set(ROOT_NAMESPACE kiss_sdl2)
+set(ROOT_NAMESPACE SDL2_kiss)
